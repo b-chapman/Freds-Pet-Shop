@@ -1,0 +1,48 @@
+<div>
+    Pets available for sale:
+    <div>
+        <table class="menu">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Sell!</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="pet in pets">
+                <td>{{pet.name}}</td>
+                <td>&pound;{{pet.price}}</td>
+                <td>
+                    <button type="submit" ng-click="makeSale(pet)">Sell me</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p></p>
+
+        Sales:
+        <table class="menu">
+            <thead>
+            <tr>
+                <th>Pets sold</th>
+                <th>Gross sales</th>
+                <th>Leg tax due</th>
+                <th>VAT due</th>
+                <th>Net profit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- TODO: Use a formatter to make it currency-friendly -->
+            <tr ng-model="saleInfo">
+                <td>{{saleInfo.sales.length}}</td>
+                <td>&pound;{{saleInfo.totalGrossSales}}</td>
+                <td>&pound;{{saleInfo.totalLegTax}}</td>
+                <td>&pound;{{saleInfo.totalVAT}}</td>
+                <td>&pound;{{saleInfo.totalProfit}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+/* app css stylesheet */
+
+body {
+    padding: 20px;
+}
+
+td, th {
+    border: 1px solid;
+    padding: 5px;
+}
